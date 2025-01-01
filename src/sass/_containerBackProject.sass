@@ -1,0 +1,200 @@
+.containerBackProject
+    @include center
+    @include card
+    padding-block: 40px
+    position: absolute
+    z-index: 999
+    top: 80px
+
+    @include desktop
+        width: 720px
+    
+        
+    .containerHeaderCard
+        @include headerCards
+
+        @include desktop
+            gap: 10px
+
+        .containerTitle
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            h1
+                @include h1Cards
+
+                @include desktop
+                    font-size: 1.3em
+
+            .btnClose 
+                cursor: pointer
+                @include center
+                height: 30px
+                width: 30px
+                margin-right: 5px
+
+                @include desktop
+                    position: absolute
+                    right: 17px
+                    top: 30px
+
+        p
+            @include paragrafoPadrao
+
+            @include desktop
+                font-size: 16px
+                max-width: 610px
+
+    .active
+        border: 2px solid $Moderate-cyan !important
+
+        .containerTxtCard
+            .containerTitleCard
+                .cicleCheck
+                    position: relative
+                    &::after
+                        content: ''
+                        height: 15px
+                        width: 15px
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        background: $Moderate-cyan
+                        border-radius: 50%
+        
+        .containerEntre
+            display: flex
+
+    .carOff
+            opacity: 0.4
+            cursor: default !important
+
+
+    .cardOpton
+        cursor: pointer
+        @include cardOptions
+
+        .containerTxtCard
+            @include txtCards
+
+            .containerTitleCard
+                display: flex
+                align-items: center
+                gap: 15px
+
+                .cicleCheck
+                    border-radius: 50%
+                    height: 30px
+                    width: 30px
+                    border: 1px solid $Dark-gray
+                    position: relative
+
+                .titleCard
+                    @include headerProjct
+
+                    @include desktop
+                        display: flex
+                        gap: 10px
+
+                    h2
+                        @include desktop
+                            font-size: 15px
+
+                    span 
+                        @include desktop
+                            font-size: 15px
+
+                .containerLeftDesktop
+                    display: none
+
+                    h3
+                        font-weight: 700
+
+                        span
+                            font-size: 12px
+                            color: $Dark-gray
+                            margin-left: 4px
+
+                    @include desktop
+                        display: inline-block
+                        margin-left: auto
+            p
+                @include paragrafoPadrao
+
+                @include desktop
+                    margin-left: 45px
+
+        .containerLeft
+            @include leftCards
+            h3
+                font-size: 20px
+
+            @include desktop
+                display: none
+
+    .containerEntre
+        display: none
+        justify-content: center
+        align-items: center
+        gap: 30px
+        flex-direction: column
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        width: 300px
+        height: auto
+        padding-block: 10px
+        border-top: 2px solid #d7d7d7
+
+        @include desktop
+            flex-direction: row
+            justify-content: space-between
+            width: 637px
+            height: 110px
+            padding: 0px 15px
+
+        span
+            color: $Dark-gray
+            font-size: 16px
+            font-weight: 500
+            padding-top: 20px
+
+            @include desktop
+                padding: 0
+
+        .containerInputPrice
+            display: flex
+            align-items: center
+            gap: 20px
+
+            .priceInput
+                position: relative
+
+                label
+                    position: absolute
+                    z-index: 2
+                    top: 50%
+                    left: 28px
+                    transform: translateY(-50%)
+                    font-size: 16px
+                    font-weight: 500
+                    color: #d7d7d7
+
+                input[type='number']
+                    position: relative
+                    width: 105px
+                    height: 54px
+                    border-radius: 30px
+                    text-align: center
+                    font-weight: 700
+                    padding-left: 10px
+                    border: 2px solid #d7d7d7
+
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button
+                        -webkit-appearance: none
+
+                    &:focus
+                        outline: none

@@ -1,0 +1,108 @@
+header
+    background: url('../../src/assets/images/image-hero-mobile.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    height: 300px
+    width: 100%
+
+    @include desktop
+        background: url('../../src/assets/images/image-hero-desktop.jpg')
+        height: 400px
+    
+
+    .navBar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 70px
+        width: 100%
+
+        .containerLogo
+            margin-left: 25px
+
+            @include desktop
+                width: 361px
+                margin-left: 150px
+
+        .containerLogo,
+        .btnMenu
+            position: relative
+            z-index: 777
+
+        ul
+            display: none
+            flex-direction: column
+            position: absolute
+            top: 190px
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 777
+            background: #fff
+            width: 340px
+            border-radius: 8px
+            list-style: none
+
+            @include desktop
+                display: flex
+                flex-direction: row
+                position: relative
+                top: 0
+                left: 0
+                transform: translate(-0%, -0%)
+                z-index: 0
+                height: 70px
+                width: 361px
+                background: transparent
+                margin-right: 90px
+
+            a
+                text-decoration: none
+                color: $Black
+                font-weight: 500
+
+                @include desktop
+                    color: #fff
+                    font-weight: 400
+
+                li
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    height: 75px
+                    font-size: 1.4em
+                    margin-left: 20px
+
+                    @include desktop
+                        justify-content: center
+                        font-size: 16px
+                        width: 100px
+                        height: 70px
+                        margin-left: 0px
+
+                        &:hover
+                            text-decoration: underline
+                        
+
+            .linha
+                background: #bdbdbd
+                width: 100%
+                height: 1px
+
+                @include desktop
+                    display: none
+
+        .btnMenu
+            cursor: pointer
+            @include center
+            height: 30px
+            width: 30px
+            margin-right: 15px
+
+            @include desktop
+                display: none
+
+        .fundoEscuro
+            @include background
+            z-index: 666
+
+

@@ -1,0 +1,28 @@
+.containerCheck
+    @include center
+    @include card
+    padding-block: 50px
+    position: absolute
+    z-index: 999
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+
+    @include desktop
+        width: 520px
+
+    img 
+        width: 80px
+
+    h1
+        @include h1Cards
+    
+    p
+        @include paragrafoPadrao
+        max-width: 300px
+
+        @include desktop
+            font-size: 16px
+            line-height: 30px
+            max-width: 450px

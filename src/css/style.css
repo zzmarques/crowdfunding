@@ -1,0 +1,788 @@
+.btn, .btnContinue, .btnCheck, .btnProject {
+  cursor: pointer;
+  border: 0;
+  background: hsl(176, 50%, 47%);
+  color: #fff;
+  padding: 19px 50px;
+  border-radius: 30px;
+  font-size: 17px;
+  transition: background ease 0.6s;
+}
+.btn:hover, .btnContinue:hover, .btnCheck:hover, .btnProject:hover {
+  background: hsl(176, 72%, 28%);
+}
+
+.btnProject {
+  padding: 17px 25px;
+}
+.btnProject a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.off {
+  background: hsl(0, 0%, 48%);
+}
+.off:hover {
+  background: #7a7a7a;
+}
+
+.btnCheck {
+  padding: 17px 40px;
+}
+
+.btnContinue {
+  padding: 18px 33px;
+}
+.btnContinue a {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background: url("../../src/assets/images/image-hero-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  header {
+    background: url("../../src/assets/images/image-hero-desktop.jpg");
+    height: 400px;
+  }
+}
+header .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+}
+header .navBar .containerLogo {
+  margin-left: 25px;
+}
+@media (min-width: 1024px) {
+  header .navBar .containerLogo {
+    width: 361px;
+    margin-left: 150px;
+  }
+}
+header .navBar .containerLogo,
+header .navBar .btnMenu {
+  position: relative;
+  z-index: 777;
+}
+header .navBar ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 777;
+  background: #fff;
+  width: 340px;
+  border-radius: 8px;
+  list-style: none;
+}
+@media (min-width: 1024px) {
+  header .navBar ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    z-index: 0;
+    height: 70px;
+    width: 361px;
+    background: transparent;
+    margin-right: 90px;
+  }
+}
+header .navBar ul a {
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  header .navBar ul a {
+    color: #fff;
+    font-weight: 400;
+  }
+}
+header .navBar ul a li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  font-size: 1.4em;
+  margin-left: 20px;
+}
+@media (min-width: 1024px) {
+  header .navBar ul a li {
+    justify-content: center;
+    font-size: 16px;
+    width: 100px;
+    height: 70px;
+    margin-left: 0px;
+  }
+  header .navBar ul a li:hover {
+    text-decoration: underline;
+  }
+}
+header .navBar ul .linha {
+  background: #bdbdbd;
+  width: 100%;
+  height: 1px;
+}
+@media (min-width: 1024px) {
+  header .navBar ul .linha {
+    display: none;
+  }
+}
+header .navBar .btnMenu {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+@media (min-width: 1024px) {
+  header .navBar .btnMenu {
+    display: none;
+  }
+}
+header .navBar .fundoEscuro {
+  position: fixed;
+  z-index: 888;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7411764706);
+  z-index: 666;
+}
+
+.cardMastercraft, .containerAboutProject, .cardPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 340px;
+  padding-block: 55px;
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  bottom: 60px;
+}
+@media (min-width: 1024px) {
+  .cardMastercraft, .containerAboutProject, .cardPrice {
+    width: 720px;
+  }
+}
+.cardMastercraft .logoMastercraft, .containerAboutProject .logoMastercraft, .cardPrice .logoMastercraft {
+  position: absolute;
+  top: -30px;
+}
+.cardMastercraft .textMastercraft, .containerAboutProject .textMastercraft, .cardPrice .textMastercraft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.cardMastercraft .textMastercraft h1, .containerAboutProject .textMastercraft h1, .cardPrice .textMastercraft h1 {
+  font-weight: 700;
+  font-size: 1.6em;
+  max-width: 293px;
+}
+@media (min-width: 1024px) {
+  .cardMastercraft .textMastercraft h1, .containerAboutProject .textMastercraft h1, .cardPrice .textMastercraft h1 {
+    max-width: 450px;
+  }
+}
+.cardMastercraft .textMastercraft p, .containerAboutProject .textMastercraft p, .cardPrice .textMastercraft p {
+  color: hsl(0, 0%, 48%);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 293px;
+}
+@media (min-width: 1024px) {
+  .cardMastercraft .textMastercraft p, .containerAboutProject .textMastercraft p, .cardPrice .textMastercraft p {
+    max-width: 550px;
+  }
+}
+.cardMastercraft .containerMastercraft, .containerAboutProject .containerMastercraft, .cardPrice .containerMastercraft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .cardMastercraft .containerMastercraft, .containerAboutProject .containerMastercraft, .cardPrice .containerMastercraft {
+    justify-content: space-between;
+    width: 88%;
+  }
+}
+.cardMastercraft .containerMastercraft .btnBookmark, .containerAboutProject .containerMastercraft .btnBookmark, .cardPrice .containerMastercraft .btnBookmark {
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .cardMastercraft .containerMastercraft .btnBookmark, .containerAboutProject .containerMastercraft .btnBookmark, .cardPrice .containerMastercraft .btnBookmark {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    transition: width ease 0.8s;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark:hover, .containerAboutProject .containerMastercraft .btnBookmark:hover, .cardPrice .containerMastercraft .btnBookmark:hover {
+    width: 200px;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark img, .containerAboutProject .containerMastercraft .btnBookmark img, .cardPrice .containerMastercraft .btnBookmark img {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark::before, .containerAboutProject .containerMastercraft .btnBookmark::before, .cardPrice .containerMastercraft .btnBookmark::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background: rgba(250, 250, 250, 0.5411764706);
+    border-radius: 30px;
+    z-index: 2;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark:hover::before, .containerAboutProject .containerMastercraft .btnBookmark:hover::before, .cardPrice .containerMastercraft .btnBookmark:hover::before {
+    width: 100%;
+    height: 56px;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark::after, .containerAboutProject .containerMastercraft .btnBookmark::after, .cardPrice .containerMastercraft .btnBookmark::after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    right: -14px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #fafafa;
+    font-weight: 700;
+  }
+  .cardMastercraft .containerMastercraft .btnBookmark:hover::after, .containerAboutProject .containerMastercraft .btnBookmark:hover::after, .cardPrice .containerMastercraft .btnBookmark:hover::after {
+    width: 170px;
+    height: 56px;
+    content: "Bookmark";
+  }
+}
+
+.cardPrice {
+  padding-block: 40px;
+}
+.cardPrice .containerCardPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .cardPrice .containerCardPrice {
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+}
+.cardPrice .containerCardPrice .containerPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.cardPrice .containerCardPrice .containerPrice .primary {
+  color: hsl(0, 0%, 0%);
+  font-size: 2.1em;
+  font-weight: 700;
+}
+.cardPrice .containerCardPrice .containerPrice .secondary {
+  color: hsl(0, 0%, 48%);
+  font-size: 16px;
+  font-weight: 400;
+}
+.cardPrice .linha {
+  background: hsl(0, 0%, 48%);
+  width: 90px;
+  height: 0.1px;
+}
+@media (min-width: 1024px) {
+  .cardPrice .linha {
+    transform: rotate(90deg);
+  }
+}
+.cardPrice .containerProgresso {
+  background: #fafafa;
+  width: 83%;
+  height: 15px;
+  border-radius: 40px;
+}
+.cardPrice .containerProgresso .barProgresso {
+  width: 89%;
+  height: 100%;
+  background: hsl(176, 50%, 47%);
+  border-radius: 40px;
+}
+
+.containerAboutProject {
+  padding-block: 40px;
+}
+.containerAboutProject .aboutProjectText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 89%;
+}
+.containerAboutProject .aboutProjectText h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.containerAboutProject .aboutProjectText p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  color: hsl(0, 0%, 48%);
+  max-width: 300px;
+}
+@media (min-width: 1024px) {
+  .containerAboutProject .aboutProjectText p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+.containerAboutProject .carOff {
+  opacity: 0.4;
+}
+.containerAboutProject .cardProject {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 89%;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  border-radius: 8px;
+  gap: 30px;
+  cursor: pointer;
+  transition: color ease 0.6s;
+}
+.containerAboutProject .cardProject:hover h2.desabilitado {
+  color: hsl(0, 0%, 0%);
+}
+.containerAboutProject .cardProject:hover h2 {
+  color: hsl(176, 50%, 47%);
+}
+.containerAboutProject .cardProject .textCardProject {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .containerAboutProject .cardProject .textCardProject {
+    gap: 10px;
+  }
+}
+.containerAboutProject .cardProject .textCardProject .cabecalhoCardProject h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.containerAboutProject .cardProject .textCardProject .cabecalhoCardProject span {
+  font-size: 17px;
+  font-weight: 500;
+  color: hsl(176, 50%, 47%);
+}
+@media (min-width: 1024px) {
+  .containerAboutProject .cardProject .textCardProject .cabecalhoCardProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.containerAboutProject .cardProject .textCardProject p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  color: hsl(0, 0%, 48%);
+}
+@media (min-width: 1024px) {
+  .containerAboutProject .cardProject .textCardProject p {
+    font-size: 16px;
+  }
+}
+.containerAboutProject .cardProject .containerBtn {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 30px;
+}
+.containerAboutProject .cardProject .containerBtn h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.containerAboutProject .cardProject .containerBtn h3 span {
+  color: hsl(0, 0%, 48%);
+  margin-left: 4px;
+}
+@media (min-width: 1024px) {
+  .containerAboutProject .cardProject .containerBtn {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    gap: 0;
+  }
+}
+
+.containerBackProject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 340px;
+  padding-block: 55px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding-block: 40px;
+  position: absolute;
+  z-index: 999;
+  top: 80px;
+}
+@media (min-width: 1024px) {
+  .containerBackProject {
+    width: 720px;
+  }
+}
+.containerBackProject .containerHeaderCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 89%;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerHeaderCard {
+    gap: 10px;
+  }
+}
+.containerBackProject .containerHeaderCard .containerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerBackProject .containerHeaderCard .containerTitle h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerHeaderCard .containerTitle h1 {
+    font-size: 1.3em;
+  }
+}
+.containerBackProject .containerHeaderCard .containerTitle .btnClose {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerHeaderCard .containerTitle .btnClose {
+    position: absolute;
+    right: 17px;
+    top: 30px;
+  }
+}
+.containerBackProject .containerHeaderCard p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  color: hsl(0, 0%, 48%);
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerHeaderCard p {
+    font-size: 16px;
+    max-width: 610px;
+  }
+}
+.containerBackProject .active {
+  border: 2px solid hsl(176, 50%, 47%) !important;
+}
+.containerBackProject .active .containerTxtCard .containerTitleCard .cicleCheck {
+  position: relative;
+}
+.containerBackProject .active .containerTxtCard .containerTitleCard .cicleCheck::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: hsl(176, 50%, 47%);
+  border-radius: 50%;
+}
+.containerBackProject .active .containerEntre {
+  display: flex;
+}
+.containerBackProject .carOff {
+  opacity: 0.4;
+  cursor: default !important;
+}
+.containerBackProject .cardOpton {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 89%;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  border-radius: 8px;
+}
+.containerBackProject .cardOpton .containerTxtCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .cicleCheck {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid hsl(0, 0%, 48%);
+  position: relative;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .titleCard h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .titleCard span {
+  font-size: 17px;
+  font-weight: 500;
+  color: hsl(176, 50%, 47%);
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerTxtCard .containerTitleCard .titleCard {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerTxtCard .containerTitleCard .titleCard h2 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerTxtCard .containerTitleCard .titleCard span {
+    font-size: 15px;
+  }
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .containerLeftDesktop {
+  display: none;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .containerLeftDesktop h3 {
+  font-weight: 700;
+}
+.containerBackProject .cardOpton .containerTxtCard .containerTitleCard .containerLeftDesktop h3 span {
+  font-size: 12px;
+  color: hsl(0, 0%, 48%);
+  margin-left: 4px;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerTxtCard .containerTitleCard .containerLeftDesktop {
+    display: inline-block;
+    margin-left: auto;
+  }
+}
+.containerBackProject .cardOpton .containerTxtCard p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  color: hsl(0, 0%, 48%);
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerTxtCard p {
+    margin-left: 45px;
+  }
+}
+.containerBackProject .cardOpton .containerLeft h3 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.containerBackProject .cardOpton .containerLeft h3 span {
+  color: hsl(0, 0%, 48%);
+  margin-left: 4px;
+}
+.containerBackProject .cardOpton .containerLeft h3 {
+  font-size: 20px;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .cardOpton .containerLeft {
+    display: none;
+  }
+}
+.containerBackProject .containerEntre {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  padding-block: 10px;
+  border-top: 2px solid #d7d7d7;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerEntre {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 637px;
+    height: 110px;
+    padding: 0px 15px;
+  }
+}
+.containerBackProject .containerEntre span {
+  color: hsl(0, 0%, 48%);
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+@media (min-width: 1024px) {
+  .containerBackProject .containerEntre span {
+    padding: 0;
+  }
+}
+.containerBackProject .containerEntre .containerInputPrice {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.containerBackProject .containerEntre .containerInputPrice .priceInput {
+  position: relative;
+}
+.containerBackProject .containerEntre .containerInputPrice .priceInput label {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  color: #d7d7d7;
+}
+.containerBackProject .containerEntre .containerInputPrice .priceInput input[type=number] {
+  position: relative;
+  width: 105px;
+  height: 54px;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding-left: 10px;
+  border: 2px solid #d7d7d7;
+}
+.containerBackProject .containerEntre .containerInputPrice .priceInput input[type=number]::-webkit-inner-spin-button, .containerBackProject .containerEntre .containerInputPrice .priceInput input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.containerBackProject .containerEntre .containerInputPrice .priceInput input[type=number]:focus {
+  outline: none;
+}
+
+.containerCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 340px;
+  padding-block: 55px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding-block: 50px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .containerCheck {
+    width: 520px;
+  }
+}
+.containerCheck img {
+  width: 80px;
+}
+.containerCheck h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.containerCheck p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  color: hsl(0, 0%, 48%);
+  max-width: 300px;
+}
+@media (min-width: 1024px) {
+  .containerCheck p {
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 450px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #fafafa;
+  width: 100%;
+  height: auto;
+}
+main .fundoEscuro {
+  position: fixed;
+  z-index: 888;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7411764706);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

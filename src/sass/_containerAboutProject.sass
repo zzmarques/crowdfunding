@@ -1,0 +1,67 @@
+.containerAboutProject
+        @extend .cardMastercraft 
+        padding-block: 40px
+
+        .aboutProjectText
+            @include headerCards
+
+            h1
+                @include h1Cards
+            
+            p
+                @include paragrafoPadrao
+                max-width: 300px
+
+                @include desktop
+                    max-width: 100%
+                    font-size: 16px
+
+        .carOff
+            opacity: 0.4
+
+        .cardProject 
+            @include cardOptions
+            @include desktop
+            gap: 30px
+
+            cursor: pointer
+            transition: color ease 0.6s
+
+            &:hover
+                h2.desabilitado
+                    color: $Black
+                h2
+                    color: $Moderate-cyan
+
+            .textCardProject
+                @include txtCards
+                @include desktop
+                    gap: 10px
+
+                .cabecalhoCardProject
+                    @include headerProjct
+
+                    @include desktop
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+
+                p
+                    @include paragrafoPadrao
+
+                    @include desktop
+                        font-size: 16px
+
+            .containerBtn
+                display: flex
+                flex-direction: column
+                width: 65%
+                gap: 30px
+
+                @include leftCards
+
+                @include desktop
+                    justify-content: space-between
+                    flex-direction: row
+                    width: 100%
+                    gap: 0
